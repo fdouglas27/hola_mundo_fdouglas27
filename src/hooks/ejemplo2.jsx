@@ -44,11 +44,11 @@ const Ejemplo2 = () => {
     * En caso de que cambie contador2, no habra ejecucion
     */
 
-    // useEffect(() => {
-    //     console.log('Cambio en el estado del Contador1');
-    //     console.log('Mostrando referencia a elemento del DOM');
-    //    console.log(miRef);
-    // }, [contador1]);
+    useEffect(() => {
+        console.log('Cambio en el estado del Contador1');
+        console.log('Mostrando referencia a elemento del DOM');
+       console.log(miRef);
+    }, [contador1]);
 
     /*
 * ? Caso 3: Ejecutar solo CUANDO cambie CONTADOR1 o Contador2

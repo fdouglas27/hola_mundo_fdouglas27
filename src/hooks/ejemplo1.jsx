@@ -31,7 +31,7 @@ const Ejemplo1 = () => {
     Funcion para actualizar el estado privado que contiene el contador 
     */
     function incrementarContador() {
-        //?funcionParaCambiar(nuevoValor)
+        // ? funcionParaCambiar(nuevoValor)
         setContador(contador + 1);
     }
 

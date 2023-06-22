@@ -4,12 +4,16 @@ import './App.css';
 // import Ejemplo2 from './hooks/ejemplo2';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
-// import TaskListComponent from './components/container/task_list';
+import TaskListComponent from './components/container/task_list';
 // import ComponentAComponent from './components/container/componentA';
 // import ComponentAComponent from './components/container/componentA';
-import MiComponenteConContexto from './hooks/ejemplo3';
-import Ejemplo4 from './hooks/ejemplo4';
+// import MiComponenteConContexto from './hooks/ejemplo3';
+// import Ejemplo4 from './hooks/ejemplo4';
 import { ComponenteEstado } from './components/tutoria1/componenteEstado';
+import GreetingStyled from './components/pure/greetingStyled';
+import Clock from './ejerciciosSesiones456/class.clock';
+import { ClockFuntional } from './ejerciciosSesiones456/clock';
+import AllCycles from './hooks/lifeCycle/AllCycles';
 
 function App() {
   return (
@@ -48,8 +52,16 @@ function App() {
           </h3>
         </Ejemplo4> */}
 
+        {/* <GreetingStyled name='Federico'></GreetingStyled> */}
+
+        {/* <Clock></Clock> */}
+        <ClockFuntional></ClockFuntional>
+
+        {/* <AllCycles></AllCycles> */}
+
         {/* Ejemplo tutoria minuto 62 */}
-        <ComponenteEstado></ComponenteEstado>
+        {/* <ComponenteEstado></ComponenteEstado> */}
+
         {/* <p>
           HOLA MUNDO
         </p> */}
