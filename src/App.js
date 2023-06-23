@@ -9,17 +9,17 @@ import TaskListComponent from './components/container/task_list';
 // import ComponentAComponent from './components/container/componentA';
 // import MiComponenteConContexto from './hooks/ejemplo3';
 // import Ejemplo4 from './hooks/ejemplo4';
-import { ComponenteEstado } from './components/tutoria1/componenteEstado';
-import GreetingStyled from './components/pure/greetingStyled';
-import Clock from './ejerciciosSesiones456/class.clock';
-import { ClockFuntional } from './ejerciciosSesiones456/clock';
-import AllCycles from './hooks/lifeCycle/AllCycles';
+// import { ComponenteEstado } from './components/tutoria1/componenteEstado';
+// import GreetingStyled from './components/pure/greetingStyled';
+// import Clock from './ejerciciosSesiones456/class.clock';
+// import { ClockFuntional } from './ejerciciosSesiones456/clock';
+// import AllCycles from './hooks/lifeCycle/AllCycles';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header"> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/* Componente propio greeting.jsx */}
         {/* <Greeting name="Federico">
           </Greeting> */}
@@ -29,8 +29,8 @@ function App() {
           </GreetingF> */}
 
         {/* Componente de listado de tareas */}
-        {/* <TaskListComponent>
-          </TaskListComponent> */}
+        <TaskListComponent>
+          </TaskListComponent>
 
         {/* E */}
         {/* <ComponentAComponent>
@@ -54,8 +54,9 @@ function App() {
 
         {/* <GreetingStyled name='Federico'></GreetingStyled> */}
 
+        {/* Ejercicios Sesiones 4 5 6 */}
         {/* <Clock></Clock> */}
-        <ClockFuntional></ClockFuntional>
+        {/* <ClockFuntional></ClockFuntional> */}
 
         {/* <AllCycles></AllCycles> */}
 
@@ -73,7 +74,7 @@ function App() {
         >
           Learn React
         </a> */}
-      </header>
+      {/* </header> */}
     </div>
   );
 }
