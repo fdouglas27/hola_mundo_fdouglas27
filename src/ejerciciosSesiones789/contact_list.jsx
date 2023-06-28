@@ -17,7 +17,6 @@ const ContactListComponent = () => {
         const index = contacts.indexOf(contact);
         const tempContacts = [...contacts];
         tempContacts[index].state = !tempContacts[index].state;
-        //We update the state of the component with the new list of Contacts and it will update the iteration of the Contacts to show task updated. 
         setContacts(tempContacts);
     }
 
@@ -31,7 +30,6 @@ const ContactListComponent = () => {
 
     function addContact(contact) {
         console.log('Remove this contact: ', contact);
-        // const index = contacts.indexOf(contact);
         const tempContacts = [...contacts];
         tempContacts.push(contact);
         setContacts(tempContacts);
@@ -62,9 +60,7 @@ const ContactListComponent = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {/* <TaskComponent task={tasks}>
-
-            </TaskComponent>  */}
+                              
                                 {contacts.map((contact, index) => {
                                     return (
 
@@ -73,7 +69,6 @@ const ContactListComponent = () => {
                                             contact={contact}
                                             state={stateContact}
                                             eliminate={eliminateContact}
-                                            // complete={completedtask}
                                         >
 
                                         </ContactComponent>
@@ -89,10 +84,6 @@ const ContactListComponent = () => {
                 </div>
 
             </div>
-            {/* ToDo: Aplicar un For/Map para renderizar una lista */}
-            {/* <TaskComponent task={defaultTask}>
-
-            </TaskComponent> */}
 
             <ContactForm add={addContact}></ContactForm>
         </div>

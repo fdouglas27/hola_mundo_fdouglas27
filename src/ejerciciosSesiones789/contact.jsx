@@ -8,10 +8,8 @@ const ContactComponent = ({ contact, state, eliminate }) => {
 
     function contactStateIcon() {
         if(contact.state){
-            // return (<i onClick={() => state(contact)} className='bi-toggle-on contact-action' style={{color:'green'}}></i>)
             return (<p onClick={() => state(contact)} className='contact-action' style={{color:'white', background:'green'}} >Connected</p>)
         } else {
-            // return (<i onClick={() => state(contact)} className='bi-toggle-off contact-action' style={{color:'grey'}}></i>)   
             return (<p onClick={() => state(contact)} className='contact-action' style={{color:'white', background:'red'}}>Disconnected</p>)
         }
     }
