@@ -5,6 +5,7 @@ import './App.css';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 import TaskListComponent from './components/container/task_list';
+import Father from './components/container/father';
 // import ComponentAComponent from './components/container/componentA';
 // import ComponentAComponent from './components/container/componentA';
 // import MiComponenteConContexto from './hooks/ejemplo3';
@@ -29,8 +30,7 @@ function App() {
           </GreetingF> */}
 
         {/* Componente de listado de tareas */}
-        <TaskListComponent>
-          </TaskListComponent>
+        <TaskListComponent>          </TaskListComponent>
 
         {/* E */}
         {/* <ComponentAComponent>
@@ -62,6 +62,9 @@ function App() {
 
         {/* Ejemplo tutoria minuto 62 */}
         {/* <ComponenteEstado></ComponenteEstado> */}
+
+        {/* Gestion de eventos */}
+        {/* <Father></Father> */}
 
         {/* <p>
           HOLA MUNDO

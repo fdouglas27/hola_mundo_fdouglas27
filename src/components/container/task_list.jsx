@@ -5,13 +5,26 @@ import TaskComponent from '../pure/task';
 
 //importamos la hoja de estilos de task.scss
 import '../../styles/task.scss'
+import TaskForm from '../pure/forms/taskForm';
 
 const TaskListComponent = () => {
 
-    const defaultTask = new Task('Example', 'Default description', false, LEVELS.NORMAL);
+    const defaultTask1 = new Task('Example1', 'Description1', false, LEVELS.NORMAL);
+    const defaultTask2 = new Task('Example2', 'Description2', true, LEVELS.URGENT);
+    const defaultTask3 = new Task('Example3', 'Description3', true, LEVELS.BLOCKING);
 
     //Estado del componente 
-    const [tasks, setTasks] = useState(defaultTask);
+    // ! Es realmente importante poner los corchetes [] para hacer que "tasks" sea un array, sino despues no toma el ".map" porque no es un arreglo
+    // ? puedo utilizar esta funcion para ver si es un array o no
+    // <div>
+    //   {Array.isArray(obj)
+    //     ? obj.map(element => {
+    //         return <h2>{element}</h2>;
+    //       })
+    //     : null}
+    // </div>
+
+    const [tasks, setTasks] = useState([defaultTask1, defaultTask2, defaultTask3]);
     const [loading, setLoading] = useState(true);
 
     //Control del ciclo de vida del componente
@@ -25,9 +38,42 @@ const TaskListComponent = () => {
         };
     }, [tasks]);
 
+    //esto NO se utiliza!
     // const changeState = (id) => {
     //     console.log('ToDo: Cambiar estado de una tarea')
     // }
+
+    function completedtask(task) {
+        console.log('complete this task: ', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks[index].completed = !tempTasks[index].completed;
+        //We update the state of the component with the new list of tasks and it will update the iteration of the tasks to show task updated. 
+        setTasks(tempTasks);
+    }
+
+    function removeTask(task) {
+        console.log('Remove this task: ', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.splice(index, 1)
+        setTasks(tempTasks);
+    }
+
+    function addTask(task) {
+        console.log('Remove this task: ', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks];
+        tempTasks.push(task);
+        setTasks(tempTasks);
+    }
+
+    // tasks.map((tasko,index) => {
+    //     return(
+    //     key={index}
+    //     task={tasko}
+    //     )
+    // })
 
     return (
         <div>
@@ -55,9 +101,23 @@ const TaskListComponent = () => {
                                 </tr>
                             </thead>
                             <tbody>
+                                {/* <TaskComponent task={tasks}>
 
-                                {/* ToDo: iterar sobre una lista de tareas */}
-                                <TaskComponent task={defaultTask}></TaskComponent>
+            </TaskComponent>  */}
+                                {tasks.map((task, index) => {
+                                    return (
+
+                                        <TaskComponent
+                                            key={index}
+                                            task={task}
+                                            complete={completedtask}
+                                            remove={removeTask}
+                                        >
+
+                                        </TaskComponent>
+
+                                    )
+                                })}
 
                             </tbody>
 
@@ -71,6 +131,8 @@ const TaskListComponent = () => {
             {/* <TaskComponent task={defaultTask}>
 
             </TaskComponent> */}
+
+            <TaskForm add={addTask}></TaskForm>
         </div>
     );
 };

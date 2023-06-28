@@ -11,7 +11,6 @@ const ComponentBComponent = ({ contact }) => {
     }
 
     let bool = 'false';
-    let num = 2 * '3' - '2'
 
     if (disponibility === false) {
         bool = 'Contact OffLine'
