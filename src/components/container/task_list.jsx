@@ -34,7 +34,7 @@ const TaskListComponent = () => {
         setLoading(false);
 
         return () => {
-            console.log('TaskList component is going to UNmount...');
+            console.log('TaskList component is going to Unmount...');
         };
     }, [tasks]);
 
@@ -62,7 +62,7 @@ const TaskListComponent = () => {
 
     function addTask(task) {
         console.log('Remove this task: ', task);
-        const index = tasks.indexOf(task);
+        // const index = tasks.indexOf(task);
         const tempTasks = [...tasks];
         tempTasks.push(task);
         setTasks(tempTasks);
