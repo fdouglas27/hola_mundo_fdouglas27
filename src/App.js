@@ -13,6 +13,10 @@ import ChangingColor from './ejerciciosSesiones101112/changingColor';
 // import ComponentAComponent from './components/container/componentA';
 import MiComponenteConContexto from './hooks/ejemplo3';
 import Ejemplo2 from './hooks/ejemplo2';
+import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
+import TaskListFormikComponent from './ejerciciosSesiones131415/task_listFormik';
+
 // import Ejemplo4 from './hooks/ejemplo4';
 // import { ComponenteEstado } from './components/tutoria1/componenteEstado';
 // import GreetingStyled from './components/pure/greetingStyled';
@@ -24,70 +28,80 @@ function App() {
   return (
     <div className="App">
       {/* <header className="App-header"> */}
-        {/* <img src={logo} className="App-logo" alt="logo" /> */}
-        {/* Componente propio greeting.jsx */}
-        {/* <Greeting name="Federico">
+      {/* <img src={logo} className="App-logo" alt="logo" /> */}
+      {/* Componente propio greeting.jsx */}
+      {/* <Greeting name="Federico">
           </Greeting> */}
 
-        {/* Componente de ejemplo funcional */} 
-        {/* <GreetingF name="Federico">
+      {/* Componente de ejemplo funcional */}
+      {/* <GreetingF name="Federico">
           </GreetingF> */}
 
-        {/* Componente de listado de tareas */}
-        {/* !!!!!!!! Principal !!!!!!!!!!!!!!!! */}
-        {/* <TaskListComponent>          </TaskListComponent> */}
+      {/* Componente de listado de tareas */}
+      {/* !!!!!!!! Principal !!!!!!!!!!!!!!!! */}
+      {/* <TaskListComponent></TaskListComponent> */}
 
-        {/* E */}
-        {/* <ComponentAComponent>
+      {/* E */}
+      {/* <ComponentAComponent>
           </ComponentAComponent> */}
 
-        {/* Exercises lessons 1, 2, 3 */}
-        {/* <ComponentAComponent>
+      {/* Exercises lessons 1, 2, 3 */}
+      {/* <ComponentAComponent>
           </ComponentAComponent> */}
 
-        {/* Example of HOOKS use */}
-        {/* <Ejemplo1></Ejemplo1> */}
-        {/* <Ejemplo2></Ejemplo2> */}
-{/* <Ejemplo2></Ejemplo2> */}
+      {/* Example of HOOKS use */}
+      {/* <Ejemplo1></Ejemplo1> */}
+      {/* <Ejemplo2></Ejemplo2> */}
+      {/* <Ejemplo2></Ejemplo2> */}
 
 
-        {/* <MiComponenteConContexto></MiComponenteConContexto> */}
-        
-        {/* Todo los que hay aquí, es tratado como props.children */}
-        {/* <Ejemplo4 nombre="Federico">
+      {/* <MiComponenteConContexto></MiComponenteConContexto> */}
+
+      {/* Todo los que hay aquí, es tratado como props.children */}
+      {/* <Ejemplo4 nombre="Federico">
           <h3>
             Contenido del props.children 
           </h3>
         </Ejemplo4> */}
 
-        {/* <GreetingStyled name='Federico'></GreetingStyled> */}
+      {/* <GreetingStyled name='Federico'></GreetingStyled> */}
 
-        {/* Ejercicios Sesiones 4 5 6 */}
-        {/* <Clock></Clock> */}
-        {/* <ClockFuntional></ClockFuntional> */}
+      {/* Ejercicios Sesiones 4 5 6 */}
+      {/* <Clock></Clock> */}
+      {/* <ClockFuntional></ClockFuntional> */}
 
-        {/* <AllCycles></AllCycles> */}
+      {/* <AllCycles></AllCycles> */}
 
-        {/* Ejemplo tutoria minuto 62 */}
-        {/* <ComponenteEstado></ComponenteEstado> */}
+      {/* Ejemplo tutoria minuto 62 */}
+      {/* <ComponenteEstado></ComponenteEstado> */}
 
-        {/* Gestion de eventos */}
-        {/* <Father></Father> */}
+      {/* Gestion de eventos */}
+      {/* <Father></Father> */}
 
-        {/* Ejercicios Sesiones 789 */}
-        {/* <ContactListComponent></ContactListComponent> */}
+      {/* Ejercicios Sesiones 789 */}
+      {/* <ContactListComponent></ContactListComponent> */}
 
 
-        {/* Ejemplos de renderizado condicional */}
-        {/* <OptionalRender></OptionalRender> */}
+      {/* Ejemplos de renderizado condicional */}
+      {/* <OptionalRender></OptionalRender> */}
 
-        {/* Ejercicios Sesiones 10-11-12 */}
-        <ChangingColor></ChangingColor>
+      {/* Ejercicios Sesiones 10-11-12 */}
+      {/* <ChangingColor></ChangingColor> */}
 
-        {/* <p>
+
+      {/* Formik y YUP */}
+      {/* <LoginFormik></LoginFormik> */}
+
+      {/* Register with Formik */}
+      {/* <RegisterFormik></RegisterFormik> */}
+
+      {/* Ejercicios Sesiones 13-14-15 */}
+      <TaskListFormikComponent></TaskListFormikComponent>
+
+      {/* <p>
           HOLA MUNDO
         </p> */}
-        {/* <a
+      {/* <a
           className="App-link"
           href="https://reactjs.org"
           target="_blank"

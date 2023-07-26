@@ -1,30 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import TaskComponent from '../pure/task';
+import TaskComponent from '../components/pure/task';
 
-// Models
-import { Task } from '../../models/task.class';
-import { LEVELS } from '../../models/levels.enum';
+import { Task } from '../models/task.class';
+import { LEVELS } from '../models/levels.enum';
 
-//importamos la hoja de estilos de task.scss
-import '../../styles/task.scss'
-import TaskForm from '../pure/forms/taskForm';
+import '../styles/task.scss'
+import TaskFormik from './taskFormik';
 
-const TaskListComponent = () => {
+const TaskListFormikComponent = () => {
 
     const defaultTask1 = new Task('Example1', 'Description1', false, LEVELS.NORMAL);
     const defaultTask2 = new Task('Example2', 'Description2', true, LEVELS.URGENT);
     const defaultTask3 = new Task('Example3', 'Description3', true, LEVELS.BLOCKING);
-
-    //Estado del componente 
-    // ! Es realmente importante poner los corchetes [] para hacer que "tasks" sea un array, sino despues no toma el ".map" porque no es un arreglo
-    // ? puedo utilizar esta funcion para ver si es un array o no
-    // <div>
-    //   {Array.isArray(obj)
-    //     ? obj.map(element => {
-    //         return <h2>{element}</h2>;
-    //       })
-    //     : null}
-    // </div>
 
     const [tasks, setTasks] = useState([defaultTask1, defaultTask2, defaultTask3]);
     const [loading, setLoading] = useState(true);
@@ -42,10 +29,6 @@ const TaskListComponent = () => {
         };
     }, [tasks]);
 
-    //esto NO se utiliza!
-    // const changeState = (id) => {
-    //     console.log('ToDo: Cambiar estado de una tarea')
-    // }
 
     function completedtask(task) {
         console.log('complete this task: ', task);
@@ -85,10 +68,8 @@ const TaskListComponent = () => {
                         <th scope='col'>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
-                    {/* <TaskComponent task={tasks}>
 
-</TaskComponent>  */}
+                <tbody>
                     {tasks.map((task, index) => {
                         return (
 
@@ -98,14 +79,10 @@ const TaskListComponent = () => {
                                 complete={completedtask}
                                 remove={removeTask}
                             >
-
                             </TaskComponent>
-
                         )
                     })}
-
                 </tbody>
-
             </table>
         )
     }
@@ -132,35 +109,25 @@ const TaskListComponent = () => {
     return (
         <div>
             <div className='col-12'>
-
                 <div className='card'>
-                    {/* p-3 es el padding */}
-                    {/* Card Header { title } */}
+
                     <div className='card-header p-3'>
                         <h5>
                             Your tasks:
                         </h5>
                     </div>
 
-                    {/* Card Body { content } */}
                     <div className='card-body' data-mb-perfect-scrollbar style={{ position: 'relative', height: '400px' }}>
-                        {/* ToDo: add loading spinner */}
                         {loading ? (<p style={loadingStyle}>Loading Tasks</p>) : tasksTable}
-            
+
                     </div>
 
                 </div>
-
             </div>
-
-            {/* ToDo: Aplicar un For/Map para renderizar una lista */}
-            {/* <TaskComponent task={defaultTask}>
-
-            </TaskComponent> */}
-
-            <TaskForm add={addTask} length={tasks.length}></TaskForm>
+            {/* Aca uso Formik para presentar el formulario dentro de la aplicación */}
+            <TaskFormik add={addTask} length={tasks.length}></TaskFormik>
         </div>
     );
 };
 
-export default TaskListComponent;
+export default TaskListFormikComponent;
