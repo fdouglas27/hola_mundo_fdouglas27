@@ -1,8 +1,7 @@
 import React from 'react';
 import { useLocation, useNavigate} from 'react-router-dom';
-import StatePage from './StatePage';
 
-const HomePage = () => {
+const AboutPage = () => {
 
     const location = useLocation();
     const history = useNavigate();
@@ -15,22 +14,19 @@ const HomePage = () => {
     const goFoward = () => {
         history(1)
     }
-
+    const goHome = () => {
+        history("/")
+    }
     const goNewPath = (path) => {
         history(path)
     }
 
-    const navigateProps = (path) => {
-        history(path, {search: '?online=true'}, {state: {online: 'true'}})
-    }
-
     return (
         <div>
-            <h1>Home Page</h1>
-            <h2>Dashboard</h2>
-
-            <button onClick={() => navigateProps('/online-state')}>State</button>
-            <button onClick={() => history('/profile')}>Go To Profile</button>
+             <h1>
+                About | FAQS Page
+             </h1>
+             <button onClick={goHome}>Home</button>
              <button onClick={goBack}>Back</button>
              <button onClick={goFoward}>Foward</button>
              {/* <button onClick={goNewPath}>New Path</button> */}
@@ -38,4 +34,4 @@ const HomePage = () => {
     );
 }
 
-export default HomePage;
+export default AboutPage;

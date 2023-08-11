@@ -16,6 +16,10 @@ import Ejemplo2 from './hooks/ejemplo2';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
 import TaskListFormikComponent from './ejerciciosSesiones131415/task_listFormik';
+import AsyncExample from './components/pure/AsyncExample';
+import ObservableExample from './components/pure/ObservableExample';
+import FetchExample from './components/pure/fetchExample';
+import AxiosExample from './components/pure/AxiosExample';
 
 // import Ejemplo4 from './hooks/ejemplo4';
 // import { ComponenteEstado } from './components/tutoria1/componenteEstado';
@@ -96,7 +100,19 @@ function App() {
       {/* <RegisterFormik></RegisterFormik> */}
 
       {/* Ejercicios Sesiones 13-14-15 */}
-      <TaskListFormikComponent></TaskListFormikComponent>
+      {/* <TaskListFormikComponent></TaskListFormikComponent> */}
+
+      {/* Ejemplos de asincronia */}
+      {/* <AsyncExample></AsyncExample> */}
+
+      {/* Ejemplo de Observable */}
+      {/* <ObservableExample></ObservableExample> */}
+
+      {/* Ejemplos de Fetch */}
+      {/* <FetchExample></FetchExample> */}
+
+      {/* Ejemplo con Axios */}
+      <AxiosExample></AxiosExample>
 
       {/* <p>
           HOLA MUNDO
